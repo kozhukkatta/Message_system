@@ -1,0 +1,37 @@
+{% extends 'adminhome.html' %}
+{% block content %}
+<form method="POST" class="post-form" action="/encryptmsg">
+    {% csrf_token %}
+<center></br></br></br>
+    <div style=background-color:yellow;>{{errmsg}}</div>
+<table>
+    <tr>
+        <th colspan="2">Broadcast Message</th>
+    </tr>
+    <tr>
+        <td style="width:20%;">Username:</td>
+            <td><input type="text" name="sendusername" class="form-control" value="{{username}}" readonly required></td>
+    </tr>
+    <tr>
+        <td hidden=hidden><input type="text" name="option" class="form-control" value="1"></td>
+    </tr>
+    <tr>
+        <td> Message:</td>
+        <td> <textarea name="txtmsg" placeholder="Type your message"  rows=4 cols=85></textarea></td>
+    </tr>
+    <tr>
+        <td hidden=hidden><input type="text" name="txttousername" class="form-control" value="null"  required></td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align:center;"><a href="/adminhome" class="btn btn-primary">Home</a>
+            <input type="reset" name="reset" class="btn btn-danger" style="width:200px;" value="Reset">
+            <button  type="submit" class="btn btn-success" style="width:200px;">Encrypt & Send</button></td>
+        </tr>
+</table>
+</form>
+</center>
+
+    
+    
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <title>HOME PAGE</title>
+    <style>
+        table, th ,td{
+          border:1px solid black;
+          padding: 5px;
+          
+        }
+        th{
+         text-align: center;
+        }
+        a{
+          width:200px;
+        }
+       
+      </style>
+</head>
+<body>
+    <div style="background-color: orange">&nbsp;</div>
+    <div style="background-color: black">&nbsp;</div>
+        
+         {% block content %}
+        </br></br></br></br>
+         <center><i><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>ADMIN HOME</u></h1></i></br>
+          <div class="container">
+         <ul> 
+            <ul><a href="/editusers"  class="btn btn-primary">Add & Edit Users</a></ul></br>
+            <ul><a href="/brdmsg"  class="btn btn-warning">Send broadcast Message</a></ul></br>
+            <ul><a href="/unimsg"  class="btn btn-warning">Send unicast Message</a></ul></br>
+            <ul><a href="/adcom"  class="btn btn-success">Common Messages</a></ul></br>
+            <ul><a href="/logout"  class="btn btn-danger">Sign-Out</a></ul>
+        </ul> </div>
+    </center>
+         {% endblock %}
+        </br></br></br></br>
+         <div style="background-color: black">&nbsp;</div>
+        <div style="background-color: orange">&nbsp;</div>
+        
+    
+    
+</body>
+</html>

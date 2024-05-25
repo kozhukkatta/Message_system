@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <title>Profile</title>
+    <style>
+       body{
+        background-color:#000000;
+        color:white;
+        font-size:20px;
+       }
+
+      </style>
+</head>
+<body>
+   <center>
+        
+         {% block content %}
+         <h1><b><u>sPROFILE</u></b></h1>
+         {% csrf_token %}
+        <table border="3" style="width:50rem;">
+            <tr colspan="2">
+                {% load static %}
+                <img src="{% static 'pro.jfif' %}" alt="person image" style="width: 25rem; height: 20rem;"/>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.username }}" readonly></td>
+            </tr>
+            <tr>
+                <td>fullname:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.fullname }}" readonly></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.email }}" readonly></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.dob }}" readonly></td>
+            </tr>
+            <tr>
+                <td>Role:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.role }}" readonly></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.phone }}" readonly></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.address }}" readonly></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.gender }}" readonly></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="text" name="username" class="form-control" value="{{ logins.password }}" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" ><center><a href="/userhome" class="btn btn-primary">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <a href="/editp/{{ logins.username }}" class="btn btn-danger">Edit</a></center></td>
+            </tr>
+        </table>
+         {% endblock %}
+    </center>
+</body>
+</html>

@@ -1,0 +1,121 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>profile</title>
+  </head>
+  <body>
+    <a style="font-weight:600; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: large;" class="nav-link active" href="#">Welcome : {{request.user}}</a>
+             
+
+    
+    {% load static %}
+
+{% block css %}
+<style>
+.profile{
+padding: 3%;
+margin-top: 3%;
+margin-bottom: 3%;
+border-radius: 0.5rem;
+background: #fff;
+}
+.profile-img{
+text-align: center;
+}
+.profile-img .file {
+position: relative;
+overflow: hidden;
+margin-top: -20%;
+width: 70%;
+border: none;
+border-radius: 0;
+font-size: 15px;
+background: #212529b8;
+}
+</style>
+{% endblock %}
+
+
+<div class="container profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="{{user.student.image.url}}" alt="" width="310px" height="270px">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="profile-tab">
+                    <div class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>ID:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user.id}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Username:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Full Name:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user.get_full_name}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user.email}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Phone Number:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user.student.phone}}</p>
+                            </div>
+                        </div>
+                      
+                        
+                           
+                       
+                    <a href="/edit_profile/" style="width: 9rem;" class="btn btn-outline-primary mt-3">Edit Profile</a>
+                </div>
+            </div>
+</div>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

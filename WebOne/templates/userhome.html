@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="">
+
+    <title>user index</title>
+    <style>
+        a{
+            width:170px;
+          }
+         body{
+            background-color:#000000;
+            font-family:Times New Roman;
+         }
+         photos{
+            background-color:#fffff;
+         }
+         ol,p{
+            font-size:2.5rem;
+            text-align:justify;
+         }
+         footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+          }
+          
+          .container {
+            max-width: 960px;
+            margin: 0 auto;
+          }
+          
+    </style>
+</head>
+    <nav class="navbar navbar-inverse"> 
+        <div class="container-fluid" > 
+            <div class="navbar-header"> 
+                <a class="navbar-brand" href="#">NAS.io</a> 
+            </div> 
+            <ul class="nav navbar-nav"> 
+                <li class="active"><a href="/userhome">Home</a></li> 
+                <li><a class="nav" href="prof">Profile</a></li> 
+                <li><a class="nav" href="/messg">Messages</a></li> 
+            </ul> 
+            <div style="color: white;
+            padding: 15px 50px 5px 50px;
+            float: right;
+            font-size: 16px;">  <a href="/logout" class="btn btn-danger square-btn-adjust">Sign-out</a> </div>
+            </div> 
+        </div> 
+  
+     
+
+        {% block content %}
+{% load static %}
+<img src="{% static '7.gif' %}" alt="person image" style="width: 100%; height: 100%;"/>
+</nav> 
+</div>
+
+<div class=" container-fluid" style="background-color:white">
+    <center><h1 style="font-size:5rem; color:black;"><u>About Us</u></h1></center>
+    <p>NAS Daily is a popular social media brand that produces and publishes daily videos on social media 
+        platforms such as Facebook, Instagram, and YouTube. The brand was founded in 2016 by Nuseir Yassin, 
+        who quit his job as a software engineer to travel around the world and document his experiences. The 
+        videos are typically around one minute long and cover a wide range of topics, including travel, 
+        culture, science, and social issues.</p>
+        <p>NAS Daily has gained a massive following and has become known for its engaging and informative 
+            content. The brand has also launched several spin-off channels, including NAS Daily Español, 
+            NAS Daily Arabic, and NAS Daily Kids. Additionally, NAS Academy was launched in 2020, offering 
+            online courses taught by experts in various fields.</p>
+</div>
+<div class="container-fluid" style="background-color:#00000">
+    <div class="photos" >
+        <center><h1 style="font-size:5rem; color:white;"><u>GALLERY</u></h1></center>
+    <div class="row-10">
+        <div>
+        <div class="col-6 col-sm-3"><img src="{% static 'b1.jfif' %}" alt="person image" style="width: 100%; height: 100%;"/></div>
+        <div class="col-6 col-sm-3"><img src="{% static 'e.jpeg' %}" alt="person image" style="width: 100%; height: 100%;"/></div>
+        <div class="col-6 col-sm-3"><img src="{% static 'q.jfif' %}" alt="person image" style="width: 100%; height: 100%;"/></div>
+        <div class="col-6 col-sm-3"><img src="{% static 'r.jfif' %}" alt="person image" style="width: 100%; height: 100%;"/></div>
+        </div>
+        <!-- Force next columns to break to new line -->
+      <div class="w-1"></div>
+      <div></div>
+      <br/> <br/>
+      <div class="col-6 col-sm-3"><img src="{% static 'w.jfif' %}" alt="person image" style="width: 100%; height: 100%;"/></div>
+      <div class="col-6 col-sm-3"><img src="{% static 't.jfif' %}" alt="person image" style="width: 100%; height: 100%;"/></div>
+      <div class="col-6 col-sm-3"><img src="{% static 'u.jpg' %}" alt="person image" style="width: 100%; height: 100%;"/></div>
+      <div class="col-6 col-sm-3"><img src="{% static 'y.jpg' %}" alt="person image" style="width: 100%; height: 100%;"/></div>
+    </div>
+    <div>
+        <br/>
+    </div>
+</div>
+  </div>
+  <div style="background-color:white">
+    <center><h3 style="font-size:5rem; color:black;"><u>Services</u></h3></center>
+    <p>NAS Daily provides a variety of services, primarily focused on producing and distributing engaging 
+        and informative content through social media platforms. Some of the key services provided by NAS Daily 
+        include:
+        <ul>
+            <ol>Daily one-minute videos: NAS Daily produces and publishes daily videos on social media 
+                platforms such as Facebook, Instagram, and YouTube. These videos cover a wide range of topics, 
+                including travel, culture, science, and social issues.</ol>
+            <ol>NAS Academy: An online learning platform that offers courses taught by experts in various 
+                fields. The courses cover topics such as digital marketing, storytelling, photography, and
+                more.</ol>        
+            <ol>Brand partnerships: NAS Daily partners with brands and organizations to create engaging and 
+                informative content that resonates with their target audience.</ol>
+            <ol>Live events and speaking engagements: Nuseir Yassin, the founder of NAS Daily, is a popular 
+                speaker and has given talks at conferences and events around the world.</ol>
+            </p>
+  </div>
+  <div class="container-fluid" style="background-color:#fffff">
+    <center><h1 style="font-size:5rem; color:white;"><u>Employees</u></h1></center>
+
+    
+        <div class="row-10">
+            <div>
+            <a href="#" ><img src="{% static 'f.png' %}" alt="person image" class="col-8 col-sm-5" style="width: 300px; height: 400px;"/></a>
+            <a href="" ><img src="{% static 's.png' %}" alt="person image" class="col-7 col-sm-3" style="width: 300px; height: 400px;"/></a>
+            <a href="" ><img src="{% static 'a.png' %}" alt="person image" class="col-7 col-sm-3" style="width: 300px; height: 400px;"/></a>
+            <a href="" ><img src="{% static 'h.png' %}" alt="person image" class="col-7 col-sm-3" style="width: 300px; height: 400px;"/></a>
+            </div>
+        </div>
+        <div>
+            <div class="col-7 col-sm-3"></div>
+        </div>
+  </div>
+  <div>
+    
+        <div class="container-fluid">
+            <div>
+                <ul class="nav navbar-nav"> 
+                    <li class="active"><a href="/userhome" >Home</a></li><br/>
+                    <li><a class="nav" href="prof">Profile</a></li> <br/>
+                    <li><a class="nav" href="/messg">Messages</a></li> <br/> 
+                </ul>
+                
+            </div>
+            <div>
+                <ul class="nav navbar-nav"> 
+                    <li class="active"><a href="/userhome" >Contact Us</a></li><br/>
+                    <li><a class="nav" href="prof">Location</a></li> <br/>
+                </ul> 
+            </div>
+        </div>
+        <div class="copyright">
+            <h4 style="text-align:right; left-padding:5rem;">Copyright © Nas.io 2023. All rights reserved.</h4>
+        </div> 
+      
+  </div>
+    {% endblock %}
+    </div></div>
+</body>
+</html>

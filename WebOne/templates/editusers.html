@@ -1,0 +1,46 @@
+{% extends 'adminhome.html' %}
+{% block content %}
+<center>
+    <h1>Edit profile</h1>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <tr>
+    <th>UserName</th>
+    <th>Password</th>
+    <th>Role</th>
+    <th>Full Name</th>
+    <th>Date of Birth</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Address</th>
+    <th>Gender</th>
+    <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for login in logins %}
+    <tr>
+    <td>{{ login.username }}</td>
+    <td>{{ login.password }}</td>
+    <td>{{ login.role }}</td>
+    <td>{{ login.fullname }}</td>
+    <td>{{ login.dob }}</td>
+    <td>{{ login.email }}</td>
+    <td>{{ login.phone }}</td>
+    <td>{{ login.address }}</td>
+    <td>{{ login.gender }}</td>
+    <td>
+        &nbsp;&nbsp; <a href="/editlogin/{{ login.username }}"><span class="glyphicon glyphicon-pencil">Edit</span></a>&nbsp;&nbsp;
+    <a href="/deletelogin/{{ login.username }}"><span class="glyphicon glyphicon-remove"></span>Delete</a>
+    </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+</center>
+    <br>
+    <br>
+    <center><a href="/signup" class="btn btn-primary">Add New Record</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/adminhome" class="btn btn-primary">Home</a></center>
+
+{% endblock %}

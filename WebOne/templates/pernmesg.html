@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <title>message</title>
+    <style>
+        table, th ,td{
+          border:1px solid black;
+          padding: 5px;
+          
+        }
+        th{
+         text-align: center;
+        }
+        a{
+          width:200px;
+        }
+       
+      </style>
+</head>
+<body>
+    <div style="background-color: orange">&nbsp;</div>
+    <div style="background-color: white">&nbsp;</div>
+    <div style="background-color: green">&nbsp;</div>
+        
+         {% block content %}
+        </br></br></br></br>
+         <center>
+            <div class="container">
+                <h1>Edit profile</h1>
+                <table class="table table-striped table-bordered table-sm">
+                    <thead class="thead-dark">
+                    <tr>
+                    <th>Mid</th>
+                    <th>Date</th>
+                    <th>Message</th>
+                    <th>From</th>
+                    <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for login in logins %}
+                    <tr>
+                    <td>{{ login.mid }}</td>
+                    <td>{{ login.date }}</td>
+                    <td>{{ login.msg }}</td>
+                    <td>{{ login.username }}</td>
+                    <td> 
+                      &nbsp;&nbsp; <a href="/decryptmsg/{{ login.mid }}"><span class="glyphicon glyphicon-eye-open ">Decrypt</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                    </table>
+            </div>
+            <br/><br/><br/><br/>
+    <a href="/userhome" class="btn btn-primary">HOME</a>
+        </center>
+         {% endblock %}
+        </br></br></br></br>
+        <div style="background-color: orange">&nbsp;</div>
+    <div style="background-color: white">&nbsp;</div>
+    <div style="background-color: green">&nbsp;</div>
+        
+    
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% extends 'adminhome.html' %}
+{% block content %}
+
+</br><center><h2>Sign-Up Requests</h2></br>
+{% comment %} class="table table-striped table-bordered table-sm"  {% endcomment %}
+<table bgcolor='white'>
+   
+    <tr>
+    <th>User Name</th>
+    <th>Full Name</th>
+    <th>Email</th>
+    <th>Date of Birth</th>
+    <th>Role</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Gender</th>
+    <th>Action</th>
+    </tr>
+    
+    {% for login in logins %}
+    <tr  border="2">
+    <td>{{ login.username }}</td>
+    <td>{{ login.fullname }}</td>
+    <td>{{ login.email }}</td>
+    <td>{{ login.dob }}</td>
+    <td>{{ login.role }}</td>
+    <td>{{ login.address }}</td>
+    <td>{{ login.phone }}</td>
+    <td>{{ login.gender }}</td>
+    <td>
+    <a href="/approveuser/{{ login.username }}"><span class="glyphicon glyphicon-ok">Approve</span></a>&nbsp;&nbsp;
+    <a href="/rejectuser/{{ login.username }}"><span class="glyphicon glyphicon-remove"></span>Reject</a>
+    </td>
+    </tr>
+    {% endfor %}
+    
+    </table></center>
+    <br>
+    <br>
+    <center><a href="/adminhome" class="btn btn-primary">Home</a></center>
+
+{% endblock %}

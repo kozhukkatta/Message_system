@@ -1,0 +1,20 @@
+{% extends 'userhome.html' %}
+{% block content %}
+<form method="POST" class="post-form" action="/encryptmsg">
+    {% csrf_token %}
+<center></br></br></br>
+    <div style=background-color:yellow;>{{errmsg}}</div>
+<table>
+    <a href="/cmmesg" class="btn btn-success">Common Messages</a><br/><br/>
+    <a href="/pernmesg" class="btn btn-warning">Persoanl Messages</a>
+
+    <br/><br/><br/><br/>
+    <a href="/userhome" class="btn btn-primary">HOME</a>
+</table>
+</form>
+</center>
+
+    
+    
+
+{% endblock %}
